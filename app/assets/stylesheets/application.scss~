@@ -12,26 +12,119 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+body{
+        font-family:'Roboto';
+        color:#000;
+}
 .navbar-default {
         background-color:#fff;
         border-style:none;
         padding-bottom:15px;
-        margin-bottom:20px;
         .navbar-brand {
             .icon{
-                font-size:40px;
+                font-size:40px;    
+                color: #284E77;
             }
             .logo{
                 padding-left:0;
                 font-size:27px;
                 letter-spacing:0.75px;
+                color: #F5821C;
             }
             .text-muted{
                     font-size:12px;
                     letter-spacing:2px;
+                    color: #6A7B8D;                    
             }
         }
         .navbar-nav{
                 letter-spacing:0.5px;
+                   .active a{
+                        border-bottom: 2px solid #F5821C;
+                        background-color:#fff;
+                        color:#000;
+                    }
+                    .active a:hover{
+                        background-color:#fff;
+                    } 
+                li{
+                    a{
+                        color:#6A7B8D;
+                    }
+                }
         }
+}
+
+.heading{
+    padding-top:100px;
+    padding-bottom:100px;
+    background-color:#284E77;
+    color:#fff;
+    /* top, transparent blue */ 
+    background: linear-gradient(
+      rgba(40, 78, 119, 0.1), 
+      rgba(40, 78, 119, 0.1)
+    ),image-url("apple.jpg");
+    button{
+        background-color: #284E77;
+        border-radius: 0px;
+        position: relative;
+        bottom: -50px;
+    } 
+    h3{
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 3;
+        font-size: 46px;
+    }
+    .lead{
+        font-size:25px;
+    }
+    strong{
+        color:#fff;
+    }
+}
+.section{
+    padding-top:100px;
+    padding-bottom:100px;
+    
+    h5{
+        font-size:30px;
+        letter-spacing: 5px;
+        font-weight: 700;
+        color: #F5821C;
+    }
+    h6{
+        font-size:20px;
+        letter-spacing: 5px;
+        font-weight: 700;
+    }
+   .section-lead{
+        font-size:20px;
+        color:#6A7B8D;
+   } 
+   .col-md-4{
+        color:#6A7B8D;
+        strong{
+                display: block;
+                font-size:20px;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                color: #F5821C;
+        }
+        .glyphicon{
+                border:solid;
+                font-size:40px;
+                border-radius:50%;
+                width:60px;
+                height:60px;
+                background-color: #284E77;
+                color: #fff;
+        }
+   }
+}
+.footer{
+    background-color:#284E77;
+    padding:10px;
+    color:#fff;
 }

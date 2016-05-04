@@ -15,3 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).on('click', '#contact-button', function() {
+    $('html,body').animate({
+        scrollTop: $(".footer").offset().top},
+        1000);
+});
