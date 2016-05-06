@@ -26,10 +26,18 @@ body{
                 color: #284E77;
             }
             .logo{
-                padding-left:0;
+                //padding-left:0px;
                 font-size:27px;
                 letter-spacing:0.75px;
                 color: #F5821C;
+            }
+            .col-sm-10.logo{
+              padding-left:20px; 
+            }
+            @media all and (min-width: 768px) {
+               .col-md-10.logo{
+                padding-left:0px; 
+              }
             }
             .text-muted{
                     font-size:12px;

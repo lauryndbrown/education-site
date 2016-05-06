@@ -23,10 +23,10 @@
                         <a class="navbar-brand" href="#">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-md-2 icon">
+                                    <div class="col-md-2 col-sm-2 col-xs-2 icon">
                                         <span class="glyphicon glyphicon-signal" aria-hidden="true"></span>    
                                     </div>
-                                    <div class="col-md-10 logo">
+                                    <div class="col-md-10  col-sm-10 col-xs-10 logo">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <strong>Success Works</strong><br />
@@ -215,14 +215,14 @@ John is recognized as an outstanding instructional leader and motivational speak
                             <p class="section-lead">
                             Together, we can make a difference NOW to improve the educational quality for ALL students.  We are excited about the possibility of partnering with your school district or school-site. 
                             </p>
-                            <div class="col-md-6">
+                            <div class="col-md-7">
 	                            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:400px;width:520px;'><div id='gmap_canvas' style='height:400px;width:520px;'>
 	                                </div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> 
 	                                <a href='https://add-map.com/'>embed google maps</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=c69c2c0e90cdc9c6fe6af1ef5f5dffb20262d1a0'>
 	                            </script>
 	                            <script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(33.9363979,-84.48189430000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(33.9363979,-84.48189430000002)});infowindow = new google.maps.InfoWindow({content:'<strong>Success Works Educational Consulting</strong><br>705 Powers Ferry Rd #202 <br>Marietta, GA 30067<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
                         	</div>
-                        	<div class="col-md-6">
+                        	<div class="col-md-5">
                         		<p class="notice"><%= notice %></p>
        							<p class="alert"><%= alert %></p>
 								<%=simple_form_for @contact, :html=>{:class=>'form-horizontal'} do |form| %>
