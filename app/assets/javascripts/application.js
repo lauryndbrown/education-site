@@ -15,8 +15,56 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var serviceActive=false;
+var homeActive=true;
+var aboutActive = false;
+var contactActive = false;
+
+
 $(document).on('click', '#contact-button', function() {
     $('html,body').animate({
-        scrollTop: $(".footer").offset().top},
+        scrollTop: $("#contact").offset().top},
         1000);
 });
+
+ $(document).scroll(function(){
+   
+        var scrollPos = $(document).scrollTop(); 
+        var servicesSection =  $("#services").offset().top-100;
+        var aboutSection =  $("#about").offset().top-100;
+        var contactSection =  $("#contact").offset().top-100;
+    if(scrollPos >= servicesSection  && serviceActive==false && scrollPos < aboutSection) {
+
+      activateLink(2); 
+      serviceActive=true;
+      homeActive = false;
+      aboutActive = false;
+    }
+    if(scrollPos >= aboutSection && aboutActive==false && scrollPos < contactSection)
+    {
+      activateLink(3);
+      aboutActive=true;
+      serviceActive = false;
+      contactActive = false;
+    }
+     if(scrollPos >= contactSection && contactActive==false)
+    {
+      activateLink(4);
+      contactActive=true;
+      aboutActive = false;
+    }
+    if( scrollPos < (servicesSection -400) && homeActive==false)
+    {
+      activateLink(1);
+      homeActive=true;
+      serviceActive = false;    
+    }
+  });   
+
+function activateLink(linkNum)
+{
+      var link = $('#navigation-links li:nth-child('+linkNum+')');
+      link.addClass("active");
+      link.siblings().removeClass("active");
+}
